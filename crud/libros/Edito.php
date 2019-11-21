@@ -41,8 +41,8 @@ if($_GET) {
 // Query de actualización de la tabla         
     $sql = "UPDATE libros SET autor='$f_autor', precio='$f_precio', cantidad='$f_cantidad',genero='$f_genero' WHERE titulo='$f_titulo'";
     if($conn->query($sql) === TRUE) {
-        echo "<p>Registro ACTUALIZADO</p>";
-        echo "<a href='index.php'><button type='button'>VOLVER</button></a>";
+      //  echo "<p>Registro ACTUALIZADO</p>";
+       // echo "<a href='index.php'><button type='button'>VOLVER</button></a>";
     } else {
         echo "Error " . $sql . ' ' . $conn->connect_error;
     }
@@ -56,7 +56,7 @@ if($_GET) {
         <img src="https://maestrofinanciero.com/wp-content/uploads/2012/07/exitosos.jpg">
         <br>
         
-          
+          <a href="index.php"><h2>VOLVER</h2></a>
 
     </main>
       

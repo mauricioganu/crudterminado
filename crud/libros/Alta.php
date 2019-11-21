@@ -1,18 +1,3 @@
-<HTML>
-<head>
-   <style>
-body 
- {
-  background-image: url("foto.jpg");
-  background-size: cover;
- }
-
-   </style>
-</head>
-</HTML>
-
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,6 +17,15 @@ body
     <link href="css/floating-labels.css" rel="stylesheet">
 
   </head>
+   <style>
+body 
+ {
+  background-image: url("foto.jpg");
+  background-size: cover;
+ }
+
+   </style>
+</head>
 
   <body>
 

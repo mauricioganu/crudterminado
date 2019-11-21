@@ -1,19 +1,3 @@
-<html>
-<head>
-	
-	<style>
-		body
-		{background-image: url("foto.jpg");
-         background-size: cover;
-	     }
-
-	</style>
-</head>
-</html>
-
-
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../icono.ico">
+   <link rel="icon" href="../icono.ico">
 
     <title></title>
 
@@ -33,6 +17,16 @@
     <link href="css/floating-labels.css" rel="stylesheet">
 
   </head>
+
+
+	
+	<style>
+		body
+		{background-image: url("foto.jpg");
+         background-size: cover;
+	     }
+
+	</style>
 
   <body>
 

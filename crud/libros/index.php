@@ -17,12 +17,36 @@
     <link href="css/floating-labels.css" rel="stylesheet">
 
   </head>
-
+ <main role="main" class="container">
   <body>
+     <table style="width:100%">
+<style>
+   
+    th 
+    {
+      color:green;
+      background-color: orange;
+    }
+    td {color:black;}
+    table,th,td 
+    {
+     border: 10px solid black;
+    text-align: center;
+    }
+
+    </style>  
+       <tr>
+            <th>Autor</th>
+            <th>Titulo</th>
+            <th>Precio</th>
+            <th>Genero</th>
+            <th>Cantidad</th>
+
+          </tr>
 
     <header>
     <?php
-        include "componentes/menu.php";
+      //  include "componentes/menu.php";
     ?>
     </header>
 <?php
@@ -32,14 +56,8 @@ $resultados = mysqli_query($conn,'SELECT * FROM libros');
 
 
 // Podemos ejecutar cualquier consulta SQL, por ejemplo para ingresar usuarios en una base de datos.
-echo "<table border='2'>";
-echo "<tr>";
-echo "<th>Autor</th>";
-echo "<th>Titulo</th>";
-echo "<th>Precio</th>";
-echo "<th>Genero</th>";
-echo "<th>Cantidad</th>";
-echo "</tr>";
+
+
 while($fila = mysqli_fetch_array($resultados)){
 	echo "<tr>";
 	echo "<td>";
@@ -79,9 +97,9 @@ while($fila = mysqli_fetch_array($resultados)){
 echo "</table>";
  $conn->close();
 ?>
+</main>
 
-<HTML>
-<head>
+
   <style>
 body 
  {
@@ -104,10 +122,8 @@ window.location.assign("listado.php")
 </Script>
 
 
-<br>
-<table>
-<tr>
-<td>
+
+
 <button type="button" onclick="document.getElementById('FormAlta').style.display='block'"><img src="Alta.PNG"></button>
 
 <!--<a href="FormAlta.HTML"><img src="ALTA.PNG"></a> -->
@@ -127,10 +143,10 @@ window.location.assign("listado.php")
 <br><input id="autor">
 </td>
 <td>
-<br><button type="button" onclick="listado()" >Listar Autor</button>
+<button type="button" onclick="listado()" >Listar Autor</button>
 </td>
 </tr>
-</table>
+
 
 <!-- Formulario debaja, que está oculto hasta que lo habilito con el botón -->
 
@@ -141,10 +157,10 @@ h2{color:yellow;}
 h4 {color:red;}
 br{color: green;}
 
-select {color:purple;}
 input {color:blue;}
 
 </style>
+
 <DIV id="FormBaja" style="display:none">
 <h1>BAJA</h1>
 
@@ -174,22 +190,10 @@ input {color:blue;}
   Cantidad:<br>
   <input type="text" name="cantidad" value="">
   <br><br>
-
-
-
-
-
-
-
   <input type="submit" value="ALTA">
 </form> 
 
-</DIV>
- <footer class="footer">
-    <?php
-        include "componentes/pie.php";
-    ?>
-    </footer>
+
   <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

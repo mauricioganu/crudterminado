@@ -51,16 +51,16 @@
 
 
 
-      <table style="width:100%">
+        <table style="width:100%">
 
-       <tr>
-            <th>Autor</th>
-            <th>Titulo</th>
-          	<th>Precio</th>
-            <th>Genero</th>
-            <th>Cantidad</th>
+         <tr>
+              <th>Autor</th>
+              <th>Titulo</th>
+            	<th>Precio</th>
+              <th>Genero</th>
+              <th>Cantidad</th>
 
-          </tr>
+            </tr>
 
 <?php
 
@@ -74,7 +74,7 @@ $query= 'SELECT * FROM libros WHERE autor="'.$f_autor.'"';
 
 $suma=0;
 $sumatotal=0;
-
+$total=0;
 while($fila = mysqli_fetch_array($resultados)){
 	echo "<tr>";
 	echo "<td>";
@@ -100,10 +100,9 @@ while($fila = mysqli_fetch_array($resultados)){
 
 	$suma=$fila['precio']*$fila['cantidad'];
 
-$sumatotal=$sumatotal+$suma;
-echo"<tr><td>Subtotal</td><td>"."$".$sumatotal."</td></tr>";
-
-
+echo"<tr><td>Subtotal</td><td>"."$".$suma."</td></tr>";
+$total=$total+$suma;
+echo"<tr><td>Total</td><td>"."$".$total."</td></tr>";
 }
 echo "</table>";
 echo "<br>";
