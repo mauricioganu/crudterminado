@@ -32,6 +32,7 @@
     {
      border: 10px solid black;
     text-align: center;
+    background-color: white;
     }
 
     </style>  
